@@ -3,6 +3,7 @@ package io.github.elenigeorgiou.pocketchange;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -197,7 +198,7 @@ public class PocketChange extends AppCompatActivity implements LoaderCallbacks<C
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() > 3;
     }
 
     /**
@@ -310,18 +311,18 @@ public class PocketChange extends AppCompatActivity implements LoaderCallbacks<C
 
             try {
                 // Simulate network access.
-                Thread.sleep(2000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 return false;
             }
 
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
-            }
+          //  for (String credential : DUMMY_CREDENTIALS) {
+            //    String[] pieces = credential.split(":");
+//                if (pieces[0].equals(mEmail)) {
+//                    // Account exists, return true if the password matches.
+                  //  return true; //pieces[1].equals(mPassword);
+//                }
+           // }
 
             // TODO: register the new account here.
             return true;
@@ -333,7 +334,15 @@ public class PocketChange extends AppCompatActivity implements LoaderCallbacks<C
             showProgress(false);
 
             if (success) {
-                finish();
+               // finish()
+                //
+                // ;
+                // TODO: go to new page.
+                String userId = "user123";
+                Intent myIntent = new Intent(PocketChange.this, ChooseSpace.class);
+                myIntent.putExtra("userID", userId); //Optional parameters
+                PocketChange.this.startActivity(myIntent);
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
