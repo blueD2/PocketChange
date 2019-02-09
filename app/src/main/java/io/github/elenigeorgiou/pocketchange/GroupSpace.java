@@ -89,6 +89,9 @@ public class GroupSpace
     public ListItem pickRandom(int price, HashSet<Integer> categories)
     {
         ArrayList<ListItem> list = generateList(price,categories);
-        return list.get((int)(Math.random()*list.size()));
+        if(list.size() == 0)
+            return bucketList.get((int)(Math.random()*list.size()));
+        else
+            return list.get((int)(Math.random()*list.size()));
     }
 }
