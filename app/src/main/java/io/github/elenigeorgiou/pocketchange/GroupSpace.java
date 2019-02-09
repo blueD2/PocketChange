@@ -21,11 +21,13 @@ public class GroupSpace
         groupID = getNextGroupID();
     }
 
+    //for private use
     private int getNextGroupID()
     {
         return groupID++;
     }
 
+    //for public use
     public HashSet<User> getUsers()
     {
         return users;
@@ -54,5 +56,20 @@ public class GroupSpace
     public void addUser(User u)
     {
         users.add(u);
+    }
+
+    public void removeUser(User u)
+    {
+        users.remove(u);
+    }
+
+    public void addListItem(ListItem item)
+    {
+        bucketList.add(item);
+    }
+
+    public void removeListItem(ListItem item)
+    {
+        bucketList.remove(item);
     }
 }
