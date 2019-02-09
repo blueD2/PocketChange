@@ -2,6 +2,7 @@ package io.github.elenigeorgiou.pocketchange;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,19 +19,19 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             setContentView(R.layout.activity_choose_space);
 
             Intent intent = getIntent();
-            userid = intent.getStringExtra("userId"); //if it's a string you stored.
+            userid = intent.getStringExtra("userid"); //if it's a string you stored.
 
             // TODO: connect to list of usersfind userID, , pick workspaces from list and display
 
             View.OnClickListener groupListener = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                       /*
-                    Intent intent = new Intent(ChooseSpaceActivity.this, Dash.class);
-                    int groupNum = view.getTag();
-                    intent.putExtra("groupNum", groupNum);
+
+                    Intent intent = new Intent(ChooseSpaceActivity.this, Dashboard.class);
+                    int groupNum = Integer.parseInt(view.getTag().toString());
+                    intent.putExtra("groupid", groupNum);
+                    intent.putExtra("userid", userid);
                     startActivity(intent);
-                    */
                 }
             };
 
@@ -39,7 +40,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             Button[] buttons = new Button[numSpace];
             for (int i = 0; i < numSpace; i++) {
                 Button button = new Button(this);
-                button.setTag("groupspace" + (i+1));
+                button.setTag(i+1);
 
                 button.setText(groupSpaceNames[i]);
                 buttons[i] = button;
@@ -60,12 +61,12 @@ public class ChooseSpaceActivity extends AppCompatActivity {
                 public void onClick(View view) {
 
                     Intent intent = new Intent(ChooseSpaceActivity.this, AddSpaceActivity.class);
-                    intent.putExtra("userId", userid);
+                    intent.putExtra("userid", userid);
                     startActivity(intent);
 
                 }
             };
-            Button addGroupButton = (Button) findViewById(R.id.addGroup);
+            FloatingActionButton addGroupButton = (FloatingActionButton) findViewById(R.id.addGroup);
             addGroupButton.setOnClickListener(addGroupListener);
         }
 

@@ -15,7 +15,7 @@ public class AddSpaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_space);
         Intent intent = getIntent();
-        userid = intent.getStringExtra("userId"); //if it's a string you stored.
+        userid = intent.getStringExtra("userid"); //if it's a string you stored.
 
 
         groupName = (EditText) findViewById(R.id.groupName);
@@ -30,7 +30,7 @@ public class AddSpaceActivity extends AppCompatActivity {
                 String newGroupName = groupName.getText().toString();
                 ///
                 Intent intent = new Intent(AddSpaceActivity.this, ChooseSpaceActivity.class);
-                intent.putExtra("userId", userid);
+                intent.putExtra("userid", userid);
                 startActivity(intent);
 
             }
