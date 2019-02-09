@@ -1,10 +1,11 @@
 package io.github.elenigeorgiou.pocketchange;
 
+import java.io.Serializable;
 import java.util.*;
 import java.lang.*;
 import java.net.*;
 
-public class ListItem {
+public class ListItem implements Serializable {
     /*
      * String name (name of the event/item)
      * String description (a  provided description of the event)
@@ -25,28 +26,17 @@ public class ListItem {
     public ListItem(String name) { this.name = name; }
 
     public void setDescription(String description) { this.description = description; }
-
     public void setPrice(int price) { this.price = price; }
-
     public void setCategory(int category) { this.category = category; }
-
     public void setUrl(URL url) { this.url = url; }
-
     public void setExpireDate(Date expireDate) { this.expireDate = expireDate; }
-
     public void setLocation(String location) { this.location = location; }
 
     public String getName() { return name; }
-
     public String getDescription() { return description; }
-
     public int getPrice() { return price; }
-
     public int getCategory() { return category; }
-
     public URL getUrl() { return url; }
-
     public Date getExpireDate() { return expireDate; }
-
     public String getLocation() { return location; }
 }
