@@ -1,9 +1,12 @@
+package io.github.elenigeorgiou.pocketchange;
+
 import java.util.HashSet;
+import java.util.ArrayList;
 
 public class GroupSpace
 {
-    private Set<User> users;
-    private List<ListItem> bucketList;
+    private HashSet<User> users;
+    private ArrayList<ListItem> bucketList;
     private int ownerID;
     private String groupName;
     private static int groupID;
