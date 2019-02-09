@@ -24,7 +24,7 @@ public class ListItemAddActivity extends AppCompatActivity {
         EditText desc = (EditText) findViewById(R.id.listDescription);
         EditText date = (EditText) findViewById(R.id.listDescription);
         EditText url = (EditText) findViewById(R.id.listUrl);
-        EditText price = (EditText) findViewById(R.id.listPrice);
+        Spinner price = (Spinner) findViewById(R.id.listPrice);
         Spinner category = (Spinner) findViewById(R.id.listCategories);
 
 
@@ -33,6 +33,9 @@ public class ListItemAddActivity extends AppCompatActivity {
         category.setAdapter(adapter);
 
 
+        String[] price_items = new String[]{"Free", "$", "$$", "$$$"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, price_items);
+        price.setAdapter(adapter2);
 
         Button saveButton = (Button)findViewById(R.id.saveItem);
 
