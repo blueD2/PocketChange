@@ -39,12 +39,12 @@ public class ListItemAddActivity extends AppCompatActivity {
         View.OnClickListener saveGroupListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            //TODO
+                         //TODO ADD LIST
 
-        //                Intent intent = new Intent(ListItemAddActivity.this, Dashboard.class);
-        //                intent.putExtra("userId", userid);
-        //                intent.putExtra("groupId", groupid);
-        //                startActivity(intent);
+                        Intent intent = new Intent(ListItemAddActivity.this, Dashboard.class);
+                        intent.putExtra("userId", userid);
+                        intent.putExtra("groupId", groupid);
+                        startActivity(intent);
 
             }
         };

@@ -40,7 +40,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             Button[] buttons = new Button[numSpace];
             for (int i = 0; i < numSpace; i++) {
                 Button button = new Button(this);
-                button.setTag("groupspace" + (i+1));
+                button.setTag(i+1);
 
                 button.setText(groupSpaceNames[i]);
                 buttons[i] = button;
