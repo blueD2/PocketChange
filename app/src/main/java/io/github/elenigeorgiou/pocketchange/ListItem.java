@@ -24,29 +24,29 @@ public class ListItem {
 
     public ListItem(String name) { this.name = name; }
 
-    private void setDescription(String description) { this.description = description; }
+    public void setDescription(String description) { this.description = description; }
 
-    private void setPrice(int price) { this.price = price; }
+    public void setPrice(int price) { this.price = price; }
 
-    private void setCategory(int category) { this.category = category; }
+    public void setCategory(int category) { this.category = category; }
 
-    private void setUrl(URL url) { this.url = url; }
+    public void setUrl(URL url) { this.url = url; }
 
-    private void setExpireDate(Date expireDate) { this.expireDate = expireDate; }
+    public void setExpireDate(Date expireDate) { this.expireDate = expireDate; }
 
-    private void setLocation(String location) { this.location = location; }
+    public void setLocation(String location) { this.location = location; }
 
-    private String getName() { return name; }
+    public String getName() { return name; }
 
-    private String getDescription() { return description; }
+    public String getDescription() { return description; }
 
-    private int getPrice() { return price; }
+    public int getPrice() { return price; }
 
-    private int getCategory() { return category; }
+    public int getCategory() { return category; }
 
-    private URL getUrl() { return url; }
+    public URL getUrl() { return url; }
 
-    private Date getExpireDate() { return expireDate; }
+    public Date getExpireDate() { return expireDate; }
 
-    private String getLocation() { return location; }
+    public String getLocation() { return location; }
 }
