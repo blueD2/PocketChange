@@ -72,4 +72,23 @@ public class GroupSpace
     {
         bucketList.remove(item);
     }
+
+    public ArrayList<ListItem> generateList(int price, HashSet<Integer> categories)
+    {
+        ArrayList<ListItem> results = new ArrayList<ListItem>();
+
+        //loop through and remove items that don't match criteria
+        for (ListItem item: bucketList) {
+            if(item.getPrice() <= price || categories.contains(item.getCategory()))
+                results.add(item);
+        }
+
+        return results;
+    }
+
+    public ListItem pickRandom(int price, HashSet<Integer> categories)
+    {
+        ArrayList<ListItem> list = generateList(price,categories);
+        return list.get((int)(Math.random()*list.size()));
+    }
 }
