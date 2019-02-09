@@ -1,10 +1,7 @@
 package io.github.elenigeorgiou.pocketchange;
 
 import android.content.Intent;
-<<<<<<< HEAD
 import android.support.design.widget.FloatingActionButton;
-=======
->>>>>>> d6c853360c90aac902e461f4e271aa9743cf982e
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +31,7 @@ public class Dashboard extends AppCompatActivity {
                     bucketList);
         }
 
-        
+
 
         View.OnClickListener addListListener = new View.OnClickListener() {
             @Override
