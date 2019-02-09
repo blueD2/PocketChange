@@ -16,7 +16,8 @@ public class User {
 
 	private int getNextUserID(){ return nextUserID++; }
 
-	public void addGroupSpace(GroupSpace gs) { groupSpaces.add(gs); }
+	public boolean addGroupSpace(GroupSpace gs) { return groupSpaces.add(gs); }
+    public void removeGroupSpace(GroupSpace gs) { groupSpaces.remove(gs); }
 
 	public int getUserID() { return userID; }
 	public String getUsername() { return username; }
