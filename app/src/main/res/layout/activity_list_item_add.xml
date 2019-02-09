@@ -82,18 +82,14 @@
         app:layout_constraintTop_toBottomOf="@+id/listUrl"
         tools:layout_editor_absoluteX="8dp" />
 
-    <EditText
+    <Spinner
         android:id="@+id/listPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Price 0,1,2,3"
         app:layout_constraintBottom_toTopOf="@+id/listUrl"
         app:layout_constraintTop_toBottomOf="@+id/listDate"
-        app:layout_constraintVertical_bias="0.533"
-        tools:layout_editor_absoluteX="94dp" />
+        tools:layout_editor_absoluteX="8dp" />
 
 </android.support.constraint.ConstraintLayout>
