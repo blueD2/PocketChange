@@ -26,6 +26,31 @@ public class GroupSpace
         return groupID++;
     }
 
+    public HashSet<User> getUsers()
+    {
+        return users;
+    }
+
+    public ArrayList<ListItem> getBucketList()
+    {
+        return bucketList;
+    }
+
+    public int getOwnerID()
+    {
+        return ownerID;
+    }
+
+    public String getGroupName()
+    {
+        return groupName;
+    }
+
+    public int getGroupID()
+    {
+        return groupID;
+    }
+
     public void addUser(User u)
     {
         users.add(u);
