@@ -6,25 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ChooseSpaceActivity">
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="36dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <LinearLayout
         android:id="@+id/chooseLinearLayout"
         android:layout_width="417dp"
         android:layout_height="495dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <Button
-            android:id="@+id/addGroup"
-            android:layout_width="401dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="16dp"
-            android:src="@android:drawable/ic_input_add"
-            android:text="Add"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="455dp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

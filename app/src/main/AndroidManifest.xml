@@ -19,6 +19,7 @@
         <activity android:name=".ChooseSpaceActivity" />
         <activity android:name=".AddSpaceActivity" />
         <activity android:name=".Dashboard"></activity>
+        <activity android:name=".ListItemAddActivity"></activity>
     </application>
 
 </manifest>

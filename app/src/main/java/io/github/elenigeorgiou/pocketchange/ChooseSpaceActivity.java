@@ -2,6 +2,7 @@ package io.github.elenigeorgiou.pocketchange;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -25,12 +26,11 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             View.OnClickListener groupListener = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                       /*
-                    Intent intent = new Intent(ChooseSpaceActivity.this, Dash.class);
-                    int groupNum = view.getTag();
+
+                    Intent intent = new Intent(ChooseSpaceActivity.this, Dashboard.class);
+                    int groupNum = Integer.parseInt(view.getTag().toString());
                     intent.putExtra("groupNum", groupNum);
                     startActivity(intent);
-                    */
                 }
             };
 
@@ -65,7 +65,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
 
                 }
             };
-            Button addGroupButton = (Button) findViewById(R.id.addGroup);
+            FloatingActionButton addGroupButton = (FloatingActionButton) findViewById(R.id.addGroup);
             addGroupButton.setOnClickListener(addGroupListener);
         }
 
