@@ -23,7 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityChooseSpace"></activity>
+        <activity android:name=".ActivityChooseSpace" />
+        <activity
+            android:name=".GroupSpaceSettings"
+            android:label="@string/title_activity_group_space_settings" />
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/title_activity_dashboard"></activity>
     </application>
 
 </manifest>
