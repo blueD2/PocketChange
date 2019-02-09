@@ -42,7 +42,7 @@ public class ListItem {
 
     private int getPrice() { return price; }
 
-    private int getCategory() { return name; }
+    private int getCategory() { return category; }
 
     private URL getUrl() { return url; }
 

@@ -20,5 +20,5 @@ public class User {
 
 	public int getUserID() { return userID; }
 	public String getUsername() { return username; }
-	public Set<GroupSpace> getGroupSpaces() { return new HashSet<GroupSpaces>(groupSpaces);}
+	public HashSet<GroupSpace> getGroupSpaces() { return new HashSet<GroupSpace>(groupSpaces);}
 }
