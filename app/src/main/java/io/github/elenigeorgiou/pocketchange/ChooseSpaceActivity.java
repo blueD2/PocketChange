@@ -19,7 +19,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             setContentView(R.layout.activity_choose_space);
 
             Intent intent = getIntent();
-            userid = intent.getStringExtra("userId"); //if it's a string you stored.
+            userid = intent.getStringExtra("userid"); //if it's a string you stored.
 
             // TODO: connect to list of usersfind userID, , pick workspaces from list and display
 
@@ -29,7 +29,8 @@ public class ChooseSpaceActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(ChooseSpaceActivity.this, Dashboard.class);
                     int groupNum = Integer.parseInt(view.getTag().toString());
-                    intent.putExtra("groupNum", groupNum);
+                    intent.putExtra("groupid", groupNum);
+                    intent.putExtra("userid", userid);
                     startActivity(intent);
                 }
             };
@@ -60,7 +61,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
                 public void onClick(View view) {
 
                     Intent intent = new Intent(ChooseSpaceActivity.this, AddSpaceActivity.class);
-                    intent.putExtra("userId", userid);
+                    intent.putExtra("userid", userid);
                     startActivity(intent);
 
                 }

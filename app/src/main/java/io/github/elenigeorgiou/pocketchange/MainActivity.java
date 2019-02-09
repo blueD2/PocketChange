@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChooseSpaceActivity.class);
                 String userid = ((EditText) findViewById(R.id.email)).getText().toString();
-                intent.putExtra("userId", userid);
+                intent.putExtra("userid", userid);
                 startActivity(intent);
 
             }

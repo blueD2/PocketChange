@@ -17,8 +17,8 @@ public class ListItemAddActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_item_add);
 
         Intent intent = getIntent();
-        userid = intent.getStringExtra("userId"); //if it's a string you stored.
-        groupid = intent.getStringExtra("groupId");
+        userid = intent.getStringExtra("userid"); //if it's a string you stored.
+        groupid = intent.getStringExtra("groupid");
 
         EditText name = (EditText) findViewById(R.id.listName);
         EditText desc = (EditText) findViewById(R.id.listDescription);
