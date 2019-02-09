@@ -339,7 +339,7 @@ public class PocketChange extends AppCompatActivity implements LoaderCallbacks<C
                 // ;
                 // TODO: go to new page.
                 String userId = "user123";
-                Intent myIntent = new Intent(PocketChange.this, ChooseSpace.class);
+                Intent myIntent = new Intent(PocketChange.this, ActivityChooseSpace.class);
                 myIntent.putExtra("userID", userId); //Optional parameters
                 PocketChange.this.startActivity(myIntent);
 

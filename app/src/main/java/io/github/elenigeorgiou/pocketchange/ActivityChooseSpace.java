@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.view.View;
 
 
-public class ChooseSpace extends AppCompatActivity {
+public class ActivityChooseSpace extends AppCompatActivity {
     private final int MAX_SPACES = 3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
