@@ -1,9 +1,10 @@
 package io.github.elenigeorgiou.pocketchange;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.ArrayList;
 
-public class GroupSpace
+public class GroupSpace implements Serializable
 {
     private HashSet<User> users;
     private ArrayList<ListItem> bucketList;
