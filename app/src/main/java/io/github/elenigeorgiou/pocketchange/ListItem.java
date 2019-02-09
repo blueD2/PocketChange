@@ -1,10 +1,11 @@
 package io.github.elenigeorgiou.pocketchange;
 
+import java.io.Serializable;
 import java.util.*;
 import java.lang.*;
 import java.net.*;
 
-public class ListItem {
+public class ListItem implements Serializable {
     /*
      * String name (name of the event/item)
      * String description (a  provided description of the event)
