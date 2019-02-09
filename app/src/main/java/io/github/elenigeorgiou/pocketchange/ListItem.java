@@ -39,4 +39,18 @@ public class ListItem implements Serializable {
     public URL getUrl() { return url; }
     public Date getExpireDate() { return expireDate; }
     public String getLocation() { return location; }
+
+    public String toString() {
+        String toRet = "";
+
+        if (price == 0)
+            toRet += "0";
+
+        for (int i = 0; i < price; i++)
+            toRet += "$";
+
+        toRet += " --- " + name;
+
+        return toRet;
+    }
 }
