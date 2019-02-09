@@ -14,7 +14,8 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Intent intent = getIntent();
-        GroupSpace currentGS = null
+        String groupID = intent.getStringExtra("groupid");
+        GroupSpace currentGS = GroupSpace.getGroupFromID(groupID);
         ArrayList<ListItem> bucketList = currentGS.getBucketList();
         ArrayAdapter<ListItem> bucketListAdapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_multiple_choice,

@@ -1,6 +1,7 @@
 package io.github.elenigeorgiou.pocketchange;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public class GroupSpace implements Serializable
     private int ownerID;
     private String groupName;
     private static int groupID;
+    private static HashMap<Integer, GroupSpace> allGroups = new HashMap<Integer, GroupSpace>();
 
     public GroupSpace(User user, String name)
     {
@@ -20,6 +22,7 @@ public class GroupSpace implements Serializable
         ownerID = user.getUserID();
         groupName = name;
         groupID = getNextGroupID();
+        allGroups.put(groupID, this);
     }
 
     //for private use
@@ -95,4 +98,6 @@ public class GroupSpace implements Serializable
         else
             return list.get((int)(Math.random()*list.size()));
     }
+
+    public static GroupSpace getGroupFromID(String gid) { return allGroups.get(Integer.parseInt(gid)); }
 }
