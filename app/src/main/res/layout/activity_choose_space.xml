@@ -4,38 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityChooseSpace">
+    tools:context=".ChooseSpaceActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+    <LinearLayout
+        android:id="@+id/chooseLinearLayout"
+        android:layout_width="417dp"
+        android:layout_height="495dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/chooseLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="298dp">
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:layout_margin="16dp"
-                android:src="@android:drawable/ic_input_add"
-                app:layout_constraintEnd_toStartOf="@+id/scrollView2"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/scrollView2"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="455dp" />
-        </LinearLayout>
-
-    </ScrollView>
-
+        <Button
+            android:id="@+id/addGroup"
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_input_add"
+            android:text="Add"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="455dp" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
