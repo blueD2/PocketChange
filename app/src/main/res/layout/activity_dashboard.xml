@@ -8,21 +8,19 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="204dp"
+        android:layout_height="41dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Your Bucketlist"
         android:textAppearance="@android:style/TextAppearance"
+        android:textSize="30sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/groupName" />
     <ListView
+        android:id="@+id/bucketList"
         android:layout_width="351dp"
         android:layout_height="469dp"
         android:layout_marginBottom="8dp"
@@ -34,15 +32,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/groupName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Turing Forever!"
         android:textAppearance="@android:style/TextAppearance"
+        android:textSize="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

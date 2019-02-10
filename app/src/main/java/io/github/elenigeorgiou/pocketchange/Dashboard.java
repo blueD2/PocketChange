@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,14 +24,22 @@ public class Dashboard extends AppCompatActivity {
         Intent intent = getIntent();
         userid = intent.getStringExtra("userid"); //if it's a string you stored.
         groupid = intent.getStringExtra("groupid"); //if it's a string you stored.
+        if(groupid == null) {
+            groupid = "0";
+        }
 
+        GroupSpace currentGS = GroupSpace.getGroupFromID(groupid);
 
-        GroupSpace currentGS = null;
         if(currentGS != null) {
+            String currentGroupName = currentGS.getGroupName();
+            TextView groupNameLabel = (TextView) findViewById(R.id.groupName);
+            groupNameLabel.setText(currentGroupName);
             ArrayList<ListItem> bucketList = currentGS.getBucketList();
-            ArrayAdapter<ListItem> bucketListAdapter = new ArrayAdapter(null,
+            ArrayAdapter<ListItem> bucketListAdapter = new ArrayAdapter(this,
                     android.R.layout.simple_list_item_multiple_choice,
                     bucketList);
+            ListView bucketListView = (ListView) findViewById(R.id.bucketList);
+            bucketListView.setAdapter(bucketListAdapter);
         }
 
 
