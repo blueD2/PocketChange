@@ -54,8 +54,6 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View view) {
 
                 //SAVE THE LIST THINGY .TODO:
-
-
                 Intent intent = new Intent(Dashboard.this, ListItemAddActivity.class);
                 intent.putExtra("userid", userid);
                 intent.putExtra("groupid", groupid);
@@ -63,12 +61,12 @@ public class Dashboard extends AppCompatActivity {
 
             }
         };
+
+
         FloatingActionButton addListButton = (FloatingActionButton) findViewById(R.id.fab);
         addListButton.setOnClickListener(addListListener);
 
-
-
-        View.OnClickListener addVoteListener = new View.OnClickListener() {
+               View.OnClickListener addVoteListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
