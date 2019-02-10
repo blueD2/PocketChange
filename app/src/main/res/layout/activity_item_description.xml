@@ -4,38 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    android:backgroundTint="@color/colorPrimary"
     tools:context=".ActivityItemDescription">
 
     <TableLayout
-        android:layout_width="395dp"
-        android:layout_height="198dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventName">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/itemName"
-                android:layout_width="138dp"
-                android:layout_height="match_parent"
-                android:text="ItemName"
-                tools:layout_editor_absoluteX="32dp"
-                tools:layout_editor_absoluteY="31dp" />
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="47dp"
-                android:layout_height="19dp"
-                android:text="$$$"
-                tools:layout_editor_absoluteX="331dp"
-                tools:layout_editor_absoluteY="31dp" />
-
-        </TableRow>
+            android:layout_height="match_parent" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -45,15 +33,18 @@
                 android:id="@+id/tags"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category:"
+                android:text=" Category:"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="32dp"
                 tools:layout_editor_absoluteY="68dp" />
 
             <TextView
                 android:id="@+id/category"
-                android:layout_width="229dp"
-                android:layout_height="20dp"
-                android:text="Category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" Category"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="149dp"
                 tools:layout_editor_absoluteY="68dp" />
         </TableRow>
@@ -66,15 +57,18 @@
                 android:id="@+id/area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location:"
+                android:text=" Location:"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="44dp"
                 tools:layout_editor_absoluteY="410dp" />
 
             <TextView
                 android:id="@+id/location"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location"
+                android:layout_height="match_parent"
+                android:text=" Location"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="134dp"
                 tools:layout_editor_absoluteY="409dp" />
         </TableRow>
@@ -86,8 +80,10 @@
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date of Expiration:"
+                android:layout_height="27dp"
+                android:text=" Date of Expiration:  "
+                android:textSize="16sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="42dp"
                 tools:layout_editor_absoluteY="447dp" />
 
@@ -95,7 +91,8 @@
                 android:id="@+id/expirationDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ExpirationDate"
+                android:text=" Expiration Date"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="189dp"
                 tools:layout_editor_absoluteY="447dp" />
 
@@ -109,15 +106,18 @@
                 android:id="@+id/description2"
                 android:layout_width="134dp"
                 android:layout_height="match_parent"
-                android:text="Description:"
+                android:text=" Description:"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="44dp"
                 tools:layout_editor_absoluteY="491dp" />
 
             <TextView
                 android:id="@+id/description"
-                android:layout_width="127dp"
-                android:layout_height="96dp"
-                android:text="Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Description"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="44dp"
                 tools:layout_editor_absoluteY="491dp" />
 
@@ -131,20 +131,52 @@
                 android:id="@+id/link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Link:"
+                android:text=" Link:"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="42dp"
                 tools:layout_editor_absoluteY="673dp" />
 
             <TextView
                 android:id="@+id/url"
-                android:layout_width="271dp"
-                android:layout_height="18dp"
-                android:text="URL"
+                android:layout_width="237dp"
+                android:layout_height="match_parent"
+                android:text=" URL"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="93dp"
                 tools:layout_editor_absoluteY="673dp" />
 
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="Event Name"
+        android:textAlignment="center"
+        android:textColor="@color/TitleColor"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="$$"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eventName"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
