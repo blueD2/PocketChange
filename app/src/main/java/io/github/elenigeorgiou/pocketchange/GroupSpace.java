@@ -23,6 +23,27 @@ public class GroupSpace implements Serializable
         groupName = name;
         groupID = getNextGroupID();
         allGroups.put(groupID, this);
+
+        ListItem temp = new ListItem("Smash tournament!!!");
+        temp.setDescription("I just got a switch for xmas!");
+        temp.setPrice(0);
+        temp.setCategory(2);
+        temp.setLocation("Vineel's apartment");
+        bucketList.add(temp);
+
+        ListItem temp2 = new ListItem("Harry Potter marathon");
+        temp2.setDescription("mischief managed :P");
+        temp2.setPrice(0);
+        temp2.setCategory(2);
+        temp2.setLocation("Skyloft");
+        bucketList.add(temp2);
+
+        ListItem temp3 = new ListItem("new Sushi roll food truck");
+        temp3.setDescription("there's a new sushi food truck behind the co-op - let's check it out sometime");
+        temp3.setPrice(2);
+        temp3.setCategory(1);
+        temp3.setLocation("Co-op");
+        bucketList.add(temp3);
     }
 
     //for private use

@@ -41,7 +41,7 @@ public class Dashboard extends AppCompatActivity {
             groupNameLabel.setText(currentGroupName);
             ArrayList<ListItem> bucketList = currentGS.getBucketList();
             ArrayAdapter<ListItem> bucketListAdapter = new ArrayAdapter(this,
-                    android.R.layout.simple_list_item_multiple_choice,
+                    android.R.layout.simple_list_item_1,
                     bucketList);
             ListView bucketListView = (ListView) findViewById(R.id.bucketList);
             bucketListView.setAdapter(bucketListAdapter);
