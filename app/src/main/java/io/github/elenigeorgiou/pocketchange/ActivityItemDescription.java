@@ -22,7 +22,7 @@ public class ActivityItemDescription extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_description);
 
-        itemName = (TextView)findViewById(R.id.itemName);
+        itemName = (TextView)findViewById(R.id.eventName);
         price = (TextView)findViewById(R.id.price);
         category = (TextView)findViewById(R.id.category);
         description = (TextView)findViewById(R.id.description);
