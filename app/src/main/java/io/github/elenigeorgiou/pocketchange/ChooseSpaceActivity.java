@@ -36,7 +36,7 @@ public class ChooseSpaceActivity extends AppCompatActivity {
             };
 
 
-            String[] groupSpaceNames = {"Group Space 1", "Group Space 2", "Turing Forever"};// //{"John","Jack",...,"Someone"}; // 20 names
+            String[] groupSpaceNames = {"Girls Who Code", "WiCS", "Turing '21"};// //{"John","Jack",...,"Someone"}; // 20 names
             GroupSpace[] sampleSpaces = new GroupSpace[groupSpaceNames.length];
             for (int i=0; i<sampleSpaces.length; i++){
                 sampleSpaces[i] = new GroupSpace(new User("sample"), groupSpaceNames[i]);
