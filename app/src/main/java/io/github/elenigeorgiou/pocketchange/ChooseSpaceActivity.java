@@ -35,7 +35,12 @@ public class ChooseSpaceActivity extends AppCompatActivity {
                 }
             };
 
+
             String[] groupSpaceNames = {"Group Space 1", "Group Space 2", "Turing Forever"};// //{"John","Jack",...,"Someone"}; // 20 names
+            GroupSpace[] sampleSpaces = new GroupSpace[groupSpaceNames.length];
+            for (int i=0; i<sampleSpaces.length; i++){
+                sampleSpaces[i] = new GroupSpace(new User("sample"), groupSpaceNames[i]);
+            }
             int numSpace = groupSpaceNames.length;
             Button[] buttons = new Button[numSpace];
             for (int i = 0; i < numSpace; i++) {
