@@ -52,10 +52,10 @@ public class VotingActivity extends AppCompatActivity {
         vote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              /*  Intent intent = new Intent(VotingActivity.this, AcivityResultsPage.class);
+                Intent intent = new Intent(VotingActivity.this, ActivityResultsPage.class);
                 intent.putExtra("userid", userid);
                 intent.putExtra("groupid", groupid);
-                startActivity(intent); */
+                startActivity(intent);
             }
         });
 
