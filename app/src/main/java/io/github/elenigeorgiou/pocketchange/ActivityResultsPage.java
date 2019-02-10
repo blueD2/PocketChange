@@ -29,5 +29,27 @@ public class ActivityResultsPage extends AppCompatActivity {
 //            ListView filteredListView = (ListView) findViewById(R.id.filteredList);
 //            filteredListView.setAdapter(filteredListAdapter);
 //        }
+
+        //hardcode!!!!
+        int price = 1;
+        HashSet<Integer> categories = new HashSet<Integer>();
+        categories.add(0);
+        categories.add(1);
+        categories.add(2);
+        categories.add(3);
+        String groupid = "0";
+
+       // GroupSpace currentGS = GroupSpace.getGroupFromID(groupid);
+       // if (currentGS != null) {
+            ArrayList<String> filteredList = new ArrayList<String>();
+            filteredList.add("0---Smash Tournament!!!!");
+            filteredList.add("0---Harry Potter marathon");
+            //now, display that list
+            ArrayAdapter<String> filteredListAdapter = new ArrayAdapter(this,
+                    android.R.layout.simple_list_item_1,
+                    filteredList);
+            ListView filteredListView = (ListView) findViewById(R.id.filteredList);
+            filteredListView.setAdapter(filteredListAdapter);
+       // }
     }
 }
